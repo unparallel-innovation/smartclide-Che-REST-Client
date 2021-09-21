@@ -1,3 +1,4 @@
+const fetch = require("node-fetch")
 const recentProjects = require('./json/mostRecentProjects.json')
 const workflows = require('./json/workflows.json')
 const services = require('./json/services.json')
@@ -8,19 +9,83 @@ module.exports = class Connector {
 
   }
 
-  getMostRecentProjects(){
+  async getMostRecentProjects(){
     return recentProjects
   }
 
-  getMostRecentWorkflows(){
+  async getMostRecentWorkflows(){
     return workflows
   }
 
-  getMostRecentServices(){
+  async getMostRecentServices(){
     return services
   }
 
-  getMostRecentDeployments(){
+  async getMostRecentDeployments(){
     return deployments
+  }
+
+  async getDevfiles(token){
+
+    const headers = new fetch.Headers();
+    headers.append("Accept", "application/json");
+    headers.append("Authorization", "Bearer " + token)
+
+    const options = {
+      method: 'GET',
+      headers: headers,
+      redirect: 'follow'
+    };
+
+    const url = "https://che-smartclide-che.che.smartclide.eu/api/devfile?version=1.0.0"
+    console.log("\nFetch URL: " + url)
+
+    try{
+      const res = await fetch(url, options)
+
+      if(res.status === 200){
+        const jsonData = await res.json()
+        return jsonData
+      }
+      else {
+        console.log("Error: " + res.status)
+      }
+      return null
+    } catch(e){
+      console.log(e)
+      throw e
+    }
+  }
+
+  async createDevfile(devfile, token){
+
+    const headers = new fetch.Headers();
+    headers.append("Accept", "text/html")
+    headers.append("Content-Type", "application/json")
+    headers.append("Authorization", "Bearer " + token)
+
+    const options = {
+      method: 'POST',
+      headers: headers,
+      redirect: 'follow',
+      body: JSON.stringify(devfile)
+    };
+    console.log("\nCreating devfile...")
+
+    try{
+      const res = await fetch(url, options)
+
+      if(res.status === 200){
+        const jsonData = await res.json()
+        return jsonData
+      }
+      else {
+        console.log("Error: " + res.status)
+      }
+      return null
+    } catch(e){
+      console.log(e)
+      throw e
+    }
   }
 }
