@@ -1,0 +1,35 @@
+[
+  {
+    "workspaceID": "w3",
+    "name": "Workflow3",
+    "type": "workflow",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
+    "serviceDependencies": "XXXXXXXXXXXXXXXXX",
+    "template": "templateA",
+    "licence": "MIT License",
+    "updatedAt": "05-01-2020 09:45"
+  },
+  {
+    "workspaceID": "w1",
+    "name": "Workflow1",
+    "type": "workflow",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
+    "serviceDependencies": "XXXXXXXXXXXXXXXXX",
+    "template": "templateB",
+    "licence": "EPL",
+    "updatedAt": "20-10-2019 09:30"
+  },
+  {
+    "workspaceID": "w2",
+    "name": "Workflow2",
+    "type": "workflow",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
+    "serviceDependencies": "XXXXXXXXXXXXXXXXX",
+    "template": "templateC",
+    "licence": "EUPL",
+    "updatedAt": "15-09-2019 10:27"
+  }
+]

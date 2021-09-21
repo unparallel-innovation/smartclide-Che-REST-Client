@@ -1,0 +1,16 @@
+{
+  "name": "@UNPARALLEL/connector-smartclide",
+  "version": "1.0.0",
+  "description": "SmartCLIDE connector",
+  "main": "connector.js",
+  "dependencies": {
+    "underscore": "^1.13.1",
+    "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UNPARALLEL Innovation, lda.",
+  "license": "ISC"
+}

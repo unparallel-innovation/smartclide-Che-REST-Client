@@ -1,0 +1,32 @@
+[
+  {
+    "workspaceID": "s1",
+    "name": "Service1",
+    "type": "service",
+    "url": "XXXXXXXXXXXXXXXXX",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "framework": "frameworkA",
+    "licence": "MIT License",
+    "updatedAt": "05-01-2020 09:45"
+  },
+  {
+    "workspaceID": "s2",
+    "name": "Service2",
+    "type": "service",
+    "url": "XXXXXXXXXXXXXXXXX",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "framework": "frameworkB",
+    "licence": "EPL",
+    "updatedAt": "10-02-2020 11:15"
+  },
+  {
+    "workspaceID": "s3",
+    "name": "Service3",
+    "type": "service",
+    "url": "XXXXXXXXXXXXXXXXX",
+    "description": "XXXXXXXXXXXXXXXXX",
+    "framework": "frameworkC",
+    "licence": "EUPL",
+    "updatedAt": "27-06-2020 21:45"
+  }
+]

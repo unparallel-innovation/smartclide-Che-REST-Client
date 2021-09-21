@@ -1,0 +1,38 @@
+[
+  {
+    "workspaceID": "d3",
+    "name": "Deployment3",
+    "type": "deployment",
+    "workflow_service": "Service C",
+    "version": "3.02",
+    "state": "Not Configured",
+    "updatedAt": "05-01-2020 09:45"
+  },
+  {
+    "workspaceID": "d4",
+    "name": "Deployment4",
+    "type": "deployment",
+    "workflow_service": "Workflow 1",
+    "version": "2.02",
+    "state": "Stopped",
+    "updatedAt": "03-01-2020 19:37"
+  },
+  {
+    "workspaceID": "d2",
+    "name": "Deployment2",
+    "type": "deployment",
+    "workflow_service": "ServiceG",
+    "version": "3.05",
+    "state": "Running",
+    "updatedAt": "20-11-2019 10:00"
+  },
+  {
+    "workspaceID": "d6",
+    "name": "Deployment6",
+    "type": "deployment",
+    "workflow_service": "ServiceA",
+    "version": "2.02",
+    "state": "Ready",
+    "updatedAt": "19-10-2019 23:18"
+  }
+]

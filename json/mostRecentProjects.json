@@ -1,0 +1,27 @@
+[
+  {
+    "workspaceID": "s1",
+    "name": "Service1",
+    "type": "service"
+  },
+  {
+    "workspaceID": "w1",
+    "name": "Workflow1",
+    "type": "workflow"
+  },
+  {
+    "workspaceID": "s3",
+    "name": "Service3",
+    "type": "service"
+  },
+  {
+    "workspaceID": "d4",
+    "name": "Deployment4",
+    "type": "deployment"
+  },
+  {
+    "workspaceID": "s2",
+    "name": "Service2",
+    "type": "service"
+  }
+]
