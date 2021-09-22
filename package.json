@@ -1,6 +1,6 @@
 {
-  "name": "@UNPARALLEL/connector-smartclide",
-  "version": "1.0.0",
+  "name": "connector-smartclide",
+  "version": "1.0.1",
   "description": "SmartCLIDE connector",
   "main": "connector.js",
   "dependencies": {

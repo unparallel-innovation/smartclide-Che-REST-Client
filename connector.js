@@ -3,6 +3,7 @@ const recentProjects = require('./json/mostRecentProjects.json')
 const workflows = require('./json/workflows.json')
 const services = require('./json/services.json')
 const deployments = require('./json/deployments.json')
+var utils = require('./utils');
 
 module.exports = class Connector {
   constructor() {
@@ -10,19 +11,20 @@ module.exports = class Connector {
   }
 
   async getMostRecentProjects(){
-    return recentProjects
+    const projects = [...workflows, ...services, ...deployments]
+    return utils.sort(projects)
   }
 
   async getMostRecentWorkflows(){
-    return workflows
+    return utils.sort(workflows)
   }
 
   async getMostRecentServices(){
-    return services
+    return utils.sort(services)
   }
 
   async getMostRecentDeployments(){
-    return deployments
+    return utils.sort(deployments)
   }
 
   async getDevfiles(token){
