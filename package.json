@@ -1,6 +1,6 @@
 {
   "name": "connector-smartclide",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "SmartCLIDE connector",
   "main": "connector.js",
   "dependencies": {
