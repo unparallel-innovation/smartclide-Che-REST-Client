@@ -7,7 +7,7 @@
     "description": "XXXXXXXXXXXXXXXXX",
     "framework": "frameworkA",
     "licence": "MIT License",
-    "updatedAt": "05-01-2020 09:45"
+    "updatedAt": "2020-01-12T15:40:32.130Z"
   },
   {
     "workspaceID": "s2",
@@ -17,7 +17,7 @@
     "description": "XXXXXXXXXXXXXXXXX",
     "framework": "frameworkB",
     "licence": "EPL",
-    "updatedAt": "10-02-2020 11:15"
+    "updatedAt": "2020-03-12T15:40:32.130Z"
   },
   {
     "workspaceID": "s3",
@@ -27,6 +27,6 @@
     "description": "XXXXXXXXXXXXXXXXX",
     "framework": "frameworkC",
     "licence": "EUPL",
-    "updatedAt": "27-06-2020 21:45"
+    "updatedAt": "2020-12-12T15:40:32.130Z"
   }
 ]

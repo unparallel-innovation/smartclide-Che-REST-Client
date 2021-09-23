@@ -8,7 +8,7 @@
     "serviceDependencies": "XXXXXXXXXXXXXXXXX",
     "template": "templateA",
     "licence": "MIT License",
-    "updatedAt": "05-01-2020 09:45"
+    "updatedAt": "2019-03-12T15:40:32.130Z"
   },
   {
     "workspaceID": "w1",
@@ -19,7 +19,7 @@
     "serviceDependencies": "XXXXXXXXXXXXXXXXX",
     "template": "templateB",
     "licence": "EPL",
-    "updatedAt": "20-10-2019 09:30"
+    "updatedAt": "2018-02-12T15:40:32.130Z"
   },
   {
     "workspaceID": "w2",
@@ -30,6 +30,6 @@
     "serviceDependencies": "XXXXXXXXXXXXXXXXX",
     "template": "templateC",
     "licence": "EUPL",
-    "updatedAt": "15-09-2019 10:27"
+    "updatedAt": "2019-01-12T15:40:32.130Z"
   }
 ]

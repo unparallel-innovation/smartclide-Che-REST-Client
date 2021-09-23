@@ -6,7 +6,7 @@
     "workflow_service": "Service C",
     "version": "3.02",
     "state": "Not Configured",
-    "updatedAt": "05-01-2020 09:45"
+    "updatedAt": "2018-09-22T15:40:32.130Z"
   },
   {
     "workspaceID": "d4",
@@ -15,7 +15,7 @@
     "workflow_service": "Workflow 1",
     "version": "2.02",
     "state": "Stopped",
-    "updatedAt": "03-01-2020 19:37"
+    "updatedAt": "2019-01-22T15:40:32.130Z"
   },
   {
     "workspaceID": "d2",
@@ -24,7 +24,7 @@
     "workflow_service": "ServiceG",
     "version": "3.05",
     "state": "Running",
-    "updatedAt": "20-11-2019 10:00"
+    "updatedAt": "2017-09-22T15:40:32.130Z"
   },
   {
     "workspaceID": "d6",
@@ -33,6 +33,6 @@
     "workflow_service": "ServiceA",
     "version": "2.02",
     "state": "Ready",
-    "updatedAt": "19-10-2019 23:18"
+    "updatedAt": "2020-09-12T15:40:32.130Z"
   }
 ]

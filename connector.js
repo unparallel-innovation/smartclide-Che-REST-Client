@@ -10,6 +10,11 @@ module.exports = class Connector {
 
   }
 
+  async getProjectDetails(id){
+    const projects = [...workflows, ...services, ...deployments]
+    return projects.find(element => element.workspaceID === id);
+  }
+
   async getMostRecentProjects(){
     const projects = [...workflows, ...services, ...deployments]
     return utils.sort(projects)
