@@ -1,7 +1,7 @@
 [
   {
-    "workspaceID": "d3",
-    "name": "Deployment3",
+    "workspaceID": "workspacez561s13l97irr2rd",
+    "name": "deployment3",
     "type": "deployment",
     "workflow_service": "Service C",
     "version": "3.02",
@@ -9,8 +9,8 @@
     "updatedAt": "2018-09-22T15:40:32.130Z"
   },
   {
-    "workspaceID": "d4",
-    "name": "Deployment4",
+    "workspaceID": "workspacemagrf6ijaj7fkjhr",
+    "name": "deployment4",
     "type": "deployment",
     "workflow_service": "Workflow 1",
     "version": "2.02",
@@ -18,8 +18,8 @@
     "updatedAt": "2019-01-22T15:40:32.130Z"
   },
   {
-    "workspaceID": "d2",
-    "name": "Deployment2",
+    "workspaceID": "workspace4ktvem2me5pzhwr9",
+    "name": "deployment2",
     "type": "deployment",
     "workflow_service": "ServiceG",
     "version": "3.05",
@@ -27,8 +27,8 @@
     "updatedAt": "2017-09-22T15:40:32.130Z"
   },
   {
-    "workspaceID": "d6",
-    "name": "Deployment6",
+    "workspaceID": "workspace7sv48vu4r6qoydbv",
+    "name": "deployment1",
     "type": "deployment",
     "workflow_service": "ServiceA",
     "version": "2.02",

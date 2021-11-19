@@ -1,7 +1,7 @@
 [
   {
-    "workspaceID": "s1",
-    "name": "Service1",
+    "workspaceID": "workspacebgozxlijnot2io9b",
+    "name": "service1",
     "type": "service",
     "url": "XXXXXXXXXXXXXXXXX",
     "description": "XXXXXXXXXXXXXXXXX",
@@ -10,8 +10,8 @@
     "updatedAt": "2020-01-12T15:40:32.130Z"
   },
   {
-    "workspaceID": "s2",
-    "name": "Service2",
+    "workspaceID": "workspacen39f9ilzo8nl9qfj",
+    "name": "service2",
     "type": "service",
     "url": "XXXXXXXXXXXXXXXXX",
     "description": "XXXXXXXXXXXXXXXXX",
@@ -20,8 +20,8 @@
     "updatedAt": "2020-03-12T15:40:32.130Z"
   },
   {
-    "workspaceID": "s3",
-    "name": "Service3",
+    "workspaceID": "workspacelccuwksbumqxd4do",
+    "name": "service3",
     "type": "service",
     "url": "XXXXXXXXXXXXXXXXX",
     "description": "XXXXXXXXXXXXXXXXX",

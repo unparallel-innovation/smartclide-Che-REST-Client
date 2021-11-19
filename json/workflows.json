@@ -1,7 +1,7 @@
 [
   {
-    "workspaceID": "w3",
-    "name": "Workflow3",
+    "workspaceID": "workspacest6cj6z0hhocxfox",
+    "name": "workflow3",
     "type": "workflow",
     "description": "XXXXXXXXXXXXXXXXX",
     "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
@@ -11,8 +11,8 @@
     "updatedAt": "2019-03-12T15:40:32.130Z"
   },
   {
-    "workspaceID": "w1",
-    "name": "Workflow1",
+    "workspaceID": "workspacekbtsd6ngfgg0yd7d",
+    "name": "workflow1",
     "type": "workflow",
     "description": "XXXXXXXXXXXXXXXXX",
     "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
@@ -22,8 +22,8 @@
     "updatedAt": "2018-02-12T15:40:32.130Z"
   },
   {
-    "workspaceID": "w2",
-    "name": "Workflow2",
+    "workspaceID": "workspacefu5abb0668xomrpr",
+    "name": "workflow2",
     "type": "workflow",
     "description": "XXXXXXXXXXXXXXXXX",
     "gitRepoOwner": "XXXXXXXXXXXXXXXXX",
