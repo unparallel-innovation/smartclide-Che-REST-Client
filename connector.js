@@ -9,17 +9,6 @@ module.exports = class Connector {
 
   }
 
-  async getProjectDetails(id){
-    const projects = [...workflows, ...services, ...deployments]
-    return projects.find(element => element.workspaceID === id);
-  }
-
-  async getMostRecentProjects(limit = 5){
-    const projects = [...workflows, ...services, ...deployments]
-    const sortedArray = utils.sort(projects)
-    return sortedArray.slice(0, limit)
-  }
-
   async getMostRecentWorkflows(){
     return utils.sort(workflows)
   }
@@ -41,13 +30,12 @@ module.exports = class Connector {
         'Authorization': `Bearer ${token}`
       }
     }
-    console.log("Get workspaces list")
 
     try{
       const res = await axios(config)
       return res.data
     } catch(e){
-      console.log(e)
+      console.error(e)
       throw e
     }
   }
@@ -78,13 +66,12 @@ module.exports = class Connector {
         'Authorization': `Bearer ${token}`
       }
     }
-    console.log("Start workspace: " + workspaceId)
 
     try{
       const res = await axios.post(url, {}, config)
       return JSON.stringify(res.data)
     } catch(e){
-      console.log(e)
+      console.error(e)
       throw e
     }
   }
@@ -98,13 +85,12 @@ module.exports = class Connector {
         'Authorization': `Bearer ${token}`
       }
     }
-    console.log("Stop workspace: " + workspaceId)
 
     try{
       const res = await axios(config)
       return JSON.stringify(res.data)
     } catch(e){
-      console.log(e)
+      console.error(e)
       throw e
     }
   }
@@ -118,13 +104,12 @@ module.exports = class Connector {
         'Authorization': `Bearer ${token}`
       }
     }
-    console.log("Details workspace: " + workspaceId)
 
     try{
       const res = await axios(config)
       return res.data
     } catch(e){
-      console.log(e)
+      console.error(e)
       throw e
     }
   }
