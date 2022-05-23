@@ -1,16 +1,21 @@
 {
-  "name": "connector-smartclide",
-  "version": "1.0.28",
-  "description": "SmartCLIDE connector",
+  "name": "@unparallel/connector-smartclide",
+  "version": "1.0.29",
+  "description": "This connector implements the logic needed to connect with SmartCLIDE workspaces, providing an abstraction used by the SmartCLIDE IDE.",
   "main": "connector.js",
   "dependencies": {
     "axios": "^0.22.0",
     "underscore": "^1.13.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "UNPARALLEL Innovation, lda.",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://gitlab.com/UNPARALLEL/H2020/smartclide/ide",
+  "bugs": {
+    "url": "https://gitlab.com/UNPARALLEL/H2020/smartclide/ide/issues"
+  },
+  "keywords": [
+    "SmartCLIDE",
+    "IDE",
+    "Connector-SmartCLIDE"
+  ]
 }

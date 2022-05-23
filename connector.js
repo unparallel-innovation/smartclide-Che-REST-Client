@@ -4,10 +4,7 @@ const deployments = require('./json/deployments.json')
 const axios = require("axios")
 const utils = require('./utils');
 
-module.exports = class Connector {
-  constructor() {
-
-  }
+class Connector {
 
   async getMostRecentWorkflows(){
     return utils.sort(workflows)
@@ -114,3 +111,5 @@ module.exports = class Connector {
     }
   }
 }
+
+exports.Connector = Connector
