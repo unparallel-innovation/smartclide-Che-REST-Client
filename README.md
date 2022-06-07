@@ -1,4 +1,4 @@
-# SmartCLIDE Connector
+# SmartCLIDE Che REST Client
 
 This connector abstracts the Eclipse Che API, providing methods to easily obtain specific information about a user and their workspaces.
 
@@ -7,13 +7,13 @@ This connector abstracts the Eclipse Che API, providing methods to easily obtain
 Use the package manager [npm](https://www.npmjs.com/) to install the SmartCLIDE connector.
 
 ```bash
-npm install connector-smartclide
+npm install @unparallel/smartclide-che-rest-client
 ```
 
 ## Usage
 
 ```javascript
-import Connector from 'connector-smartclide';
+import Connector from '@unparallel/smartclide-che-rest-client';
 
 let connector = new Connector();
 

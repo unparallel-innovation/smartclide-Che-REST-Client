@@ -1,6 +1,6 @@
 {
-  "name": "@unparallel/connector-smartclide",
-  "version": "1.0.29",
+  "name": "@unparallel/smartclide-che-rest-client",
+  "version": "1.0.0",
   "description": "This connector implements the logic needed to connect with SmartCLIDE workspaces, providing an abstraction used by the SmartCLIDE IDE.",
   "main": "connector.js",
   "dependencies": {
@@ -9,13 +9,14 @@
   },
   "author": "UNPARALLEL Innovation, lda.",
   "license": "MIT",
-  "homepage": "https://gitlab.com/UNPARALLEL/H2020/smartclide/ide",
+  "homepage": "https://github.com/unparallel-innovation/smartclide-Che-REST-Client",
   "bugs": {
-    "url": "https://gitlab.com/UNPARALLEL/H2020/smartclide/ide/issues"
+    "url": "https://github.com/unparallel-innovation/smartclide-Che-REST-Client/issues"
   },
   "keywords": [
     "SmartCLIDE",
     "IDE",
-    "Connector-SmartCLIDE"
+    "CHE",
+    "Rest Client"
   ]
 }
