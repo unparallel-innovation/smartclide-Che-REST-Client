@@ -110,6 +110,31 @@ class Connector {
       throw e
     }
   }
+
+  async workspaceExists(token, workspaceName){
+    const workspaces = await this.getWorkspaces(token);
+    const names = workspaces.map((workspace) => {return workspace.devfile.metadata.name});
+
+    return names.includes(workspaceName);
+  }
+
+  async createWorkspace(token, devfile) {
+    const url = "https://che-smartclide-che.che.smartclide.eu/api/workspace/devfile?start-after-create=true";
+
+    const config = {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      }
+    };
+
+    axios.post(url, devfile, config)
+      .then((res) => {
+        return res.data;
+      }).catch((e) => {
+        throw e;
+    });
+  }
 }
 
 exports.Connector = Connector
