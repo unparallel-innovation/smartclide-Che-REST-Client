@@ -17,6 +17,9 @@ import Connector from '@unparallel/smartclide-che-rest-client';
 
 let connector = new Connector();
 
+// Create workspace with the given devfile
+connector.createWorkspace(token, devfile);
+
 // Get list of all workspaces
 connector.getWorkspaces(token);
 
@@ -29,8 +32,14 @@ connector.getRecentWorkspaces(token, n);
 // Get details of a given workspace
 connector.getWorkspace(token, workspaceId);
 
+// Check if given workspace exists
+connector.workspaceExists(token, workspaceName);
+
 // Launch the given workspace
 connector.startWorkspace(token, workspaceId);
+
+// Update the given workspace with the provided data
+connector.updateWorkspace(token, workspaceId, data);
 
 // Stop the given workspace
 connector.stopWorkspace(token, workspaceId);

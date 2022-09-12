@@ -18,6 +18,24 @@ class Connector {
     return utils.sort(deployments)
   }
 
+  async createWorkspace(token, devfile){
+    const url = "https://che-smartclide-che.che.smartclide.eu/api/workspace/devfile?start-after-create=true";
+
+    const config = {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      }
+    };
+
+    axios.post(url, devfile, config)
+        .then((res) => {
+          return res.data;
+        }).catch((e) => {
+      throw e;
+    });
+  }
+
   async getWorkspaces(token){
     const config = {
       method: 'GET',
@@ -54,44 +72,6 @@ class Connector {
     return []
   }
 
-  async startWorkspace(token, workspaceId){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime?debug-workspace-start=false`
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Authorization': `Bearer ${token}`
-      }
-    }
-
-    try{
-      const res = await axios.post(url, {}, config)
-      return JSON.stringify(res.data)
-    } catch(e){
-      console.error(e)
-      throw e
-    }
-  }
-
-  async stopWorkspace(token, workspaceId){
-    const config = {
-      method: 'delete',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime`,
-      headers: {
-        'Accept': 'application/json',
-        'Authorization': `Bearer ${token}`
-      }
-    }
-
-    try{
-      const res = await axios(config)
-      return JSON.stringify(res.data)
-    } catch(e){
-      console.error(e)
-      throw e
-    }
-  }
-
   async getWorkspace(token, workspaceId){
     const config = {
       method: 'GET',
@@ -118,26 +98,27 @@ class Connector {
     return names.includes(workspaceName);
   }
 
-  async createWorkspace(token, devfile) {
-    const url = "https://che-smartclide-che.che.smartclide.eu/api/workspace/devfile?start-after-create=true";
-
+  async startWorkspace(token, workspaceId){
+    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime?debug-workspace-start=false`
     const config = {
       headers: {
+        'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       }
-    };
+    }
 
-    axios.post(url, devfile, config)
-      .then((res) => {
-        return res.data;
-      }).catch((e) => {
-        throw e;
-    });
+    try{
+      const res = await axios.post(url, {}, config)
+      return JSON.stringify(res.data)
+    } catch(e){
+      console.error(e)
+      throw e
+    }
   }
 
-  async updateWorkspace(token, workspaceID, data){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}`;
+  async updateWorkspace(token, workspaceId, data){
+    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}`;
 
     const config = {
       headers: {
@@ -147,11 +128,30 @@ class Connector {
     }
 
     axios.put(url, data, config)
-      .then((res) => {
-        return res.data;
-      }).catch((e) => {
-        throw e;
+        .then((res) => {
+          return res.data;
+        }).catch((e) => {
+      throw e;
     });
+  }
+
+  async stopWorkspace(token, workspaceId){
+    const config = {
+      method: 'delete',
+      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime`,
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    }
+
+    try{
+      const res = await axios(config)
+      return JSON.stringify(res.data)
+    } catch(e){
+      console.error(e)
+      throw e
+    }
   }
 }
 

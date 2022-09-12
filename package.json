@@ -1,6 +1,6 @@
 {
   "name": "@unparallel/smartclide-che-rest-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This connector implements the logic needed to connect with SmartCLIDE workspaces, providing an abstraction used by the SmartCLIDE IDE.",
   "main": "connector.js",
   "dependencies": {
