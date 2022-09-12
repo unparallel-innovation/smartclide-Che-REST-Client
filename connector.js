@@ -135,6 +135,24 @@ class Connector {
         throw e;
     });
   }
+
+  async updateWorkspace(token, workspaceID, data){
+    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}`;
+
+    const config = {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    }
+
+    axios.put(url, data, config)
+      .then((res) => {
+        return res.data;
+      }).catch((e) => {
+        throw e;
+    });
+  }
 }
 
 exports.Connector = Connector
