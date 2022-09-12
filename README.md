@@ -27,7 +27,7 @@ connector.getWorkspaces(token);
 connector.getWorkspacesWithType(token, type);
 
 // Get N most recent workspaces
-connector.getRecentWorkspaces(token, n);
+connector.getLatestWorkspaces(token, n);
 
 // Get details of a given workspace
 connector.getWorkspace(token, workspaceId);

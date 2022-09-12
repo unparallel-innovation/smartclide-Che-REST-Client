@@ -7,15 +7,15 @@ const utils = require('./utils');
 class Connector {
 
   async getMostRecentWorkflows(){
-    return utils.sort(workflows)
+    return utils.sort(workflows);
   }
 
   async getMostRecentServices(){
-    return utils.sort(services)
+    return utils.sort(services);
   }
 
   async getMostRecentDeployments(){
-    return utils.sort(deployments)
+    return utils.sort(deployments);
   }
 
   async createWorkspace(token, devfile){
@@ -29,11 +29,12 @@ class Connector {
     };
 
     axios.post(url, devfile, config)
-        .then((res) => {
-          return res.data;
-        }).catch((e) => {
-      throw e;
-    });
+      .then((res) => {
+        return res.data;
+      }).catch((e) => {
+        throw e;
+      }
+    );
   }
 
   async getWorkspaces(token){
@@ -47,35 +48,38 @@ class Connector {
     }
 
     try{
-      const res = await axios(config)
-      return res.data
+      const res = await axios(config);
+      return res.data;
     } catch(e){
-      console.error(e)
-      throw e
+      console.error(e);
+      throw e;
     }
   }
 
   async getWorkspacesWithType(token, type){
-    const ws = await this.getWorkspaces(token)
-    if(ws){
-      return ws.filter(a => a.devfile.attributes.type === type)
-    }
-    return []
+    const ws = await this.getWorkspaces(token);
+
+    if(ws)
+      return ws.filter(a => a.devfile.attributes.type === type);
+
+    return [];
   }
 
-  async getRecentWorkspaces(token, limit = 5){
-    const workspaces = await this.getWorkspaces(token)
+  async getLatestWorkspaces(token, limit = 5){
+    const workspaces = await this.getWorkspaces(token);
+
     if(workspaces){
-      const sorted = utils.sortByUpdated(workspaces)
-      return sorted.slice(0, limit)
+      const sorted = utils.sortByUpdated(workspaces);
+      return sorted.slice(0, limit);
     }
-    return []
+
+    return [];
   }
 
-  async getWorkspace(token, workspaceId){
+  async getWorkspace(token, workspaceID){
     const config = {
       method: 'GET',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}?includeInternalServers=false`,
+      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}?includeInternalServers=false`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${token}`
@@ -83,11 +87,10 @@ class Connector {
     }
 
     try{
-      const res = await axios(config)
-      return res.data
+      const res = await axios(config);
+      return res.data;
     } catch(e){
-      console.error(e)
-      throw e
+      throw e;
     }
   }
 
@@ -98,8 +101,8 @@ class Connector {
     return names.includes(workspaceName);
   }
 
-  async startWorkspace(token, workspaceId){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime?debug-workspace-start=false`
+  async startWorkspace(token, workspaceID){
+    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}/runtime?debug-workspace-start=false`
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -109,17 +112,15 @@ class Connector {
     }
 
     try{
-      const res = await axios.post(url, {}, config)
-      return JSON.stringify(res.data)
+      const res = await axios.post(url, {}, config);
+      return JSON.stringify(res.data);
     } catch(e){
-      console.error(e)
-      throw e
+      throw e;
     }
   }
 
-  async updateWorkspace(token, workspaceId, data){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}`;
-
+  async updateWorkspace(token, workspaceID, data){
+    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}`;
     const config = {
       headers: {
         'Accept': 'application/json',
@@ -127,18 +128,18 @@ class Connector {
       },
     }
 
-    axios.put(url, data, config)
-        .then((res) => {
-          return res.data;
-        }).catch((e) => {
+    try{
+      const res = await axios.put(url, data, config);
+      return res.data;
+    } catch(e){
       throw e;
-    });
+    }
   }
 
-  async stopWorkspace(token, workspaceId){
+  async stopWorkspace(token, workspaceID){
     const config = {
       method: 'delete',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceId}/runtime`,
+      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}/runtime`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${token}`
@@ -146,11 +147,10 @@ class Connector {
     }
 
     try{
-      const res = await axios(config)
-      return JSON.stringify(res.data)
+      const res = await axios(config);
+      return JSON.stringify(res.data);
     } catch(e){
-      console.error(e)
-      throw e
+      throw e;
     }
   }
 }

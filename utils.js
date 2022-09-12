@@ -9,5 +9,4 @@ module.exports = {
             return b.attributes.updated - a.attributes.updated;
         });
     }
-
 }
