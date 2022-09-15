@@ -164,7 +164,6 @@ class Connector {
 
     try{
       const res = await axios(config);
-      console.log(res.data)
       return res.data;
     } catch(e){
       throw e;

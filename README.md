@@ -18,31 +18,34 @@ import Connector from '@unparallel/smartclide-che-rest-client';
 let connector = new Connector();
 
 // Create workspace with the given devfile
-connector.createWorkspace(token, devfile);
+connector.createWorkspace(keycloakToken, devfile);
 
 // Get list of all workspaces
-connector.getWorkspaces(token);
+connector.getWorkspaces(keycloakToken);
 
 // Get list of all workspaces of the given type
-connector.getWorkspacesWithType(token, type);
+connector.getWorkspacesWithType(keycloakToken, workspaceType);
 
 // Get N most recent workspaces
-connector.getLatestWorkspaces(token, n);
+connector.getLatestWorkspaces(keycloakToken, n);
 
 // Get details of a given workspace
-connector.getWorkspace(token, workspaceId);
+connector.getWorkspace(keycloakToken, workspaceID);
 
 // Check if given workspace exists
-connector.workspaceExists(token, workspaceName);
+connector.workspaceExists(keycloakToken, workspaceName);
 
 // Launch the given workspace
-connector.startWorkspace(token, workspaceId);
+connector.startWorkspace(keycloakToken, workspaceID);
 
 // Update the given workspace with the provided data
-connector.updateWorkspace(token, workspaceId, data);
+connector.updateWorkspace(keycloakToken, workspaceID, data);
 
 // Stop the given workspace
-connector.stopWorkspace(token, workspaceId);
+connector.stopWorkspace(keycloakToken, workspaceID);
+
+// Delete the given workspace
+connector.deleteWorkspace(keycloakToken, workspaceID);
 ```
 
 ## License
