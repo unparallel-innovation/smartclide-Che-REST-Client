@@ -5,6 +5,9 @@ const axios = require("axios")
 const utils = require('./utils');
 
 class Connector {
+  constructor(baseURL){
+    this.baseURL = baseURL;
+  }
 
   async getMostRecentWorkflows(){
     return utils.sort(workflows);
@@ -19,7 +22,7 @@ class Connector {
   }
 
   async createWorkspace(keycloakToken, devfile){
-    const url = "https://che-smartclide-che.che.smartclide.eu/api/workspace/devfile";
+    const url = `${this.baseURL}/api/workspace/devfile`;
 
     const config = {
       headers: {
@@ -39,7 +42,7 @@ class Connector {
   async getWorkspaces(keycloakToken){
     const config = {
       method: 'GET',
-      url: 'https://che-smartclide-che.che.smartclide.eu/api/workspace',
+      url: `${this.baseURL}/api/workspace`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${keycloakToken}`
@@ -77,7 +80,7 @@ class Connector {
   async getWorkspace(keycloakToken, workspaceID){
     const config = {
       method: 'GET',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}?includeInternalServers=false`,
+      url: `${this.baseURL}/api/workspace/${workspaceID}?includeInternalServers=false`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${keycloakToken}`
@@ -100,7 +103,7 @@ class Connector {
   }
 
   async startWorkspace(keycloakToken, workspaceID){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}/runtime?debug-workspace-start=false`
+    const url = `${this.baseURL}/api/workspace/${workspaceID}/runtime?debug-workspace-start=false`
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -118,7 +121,7 @@ class Connector {
   }
 
   async updateWorkspace(keycloakToken, workspaceID, data){
-    const url = `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}`;
+    const url = `${this.baseURL}/api/workspace/${workspaceID}`;
     const config = {
       headers: {
         'Accept': 'application/json',
@@ -137,7 +140,7 @@ class Connector {
   async stopWorkspace(keycloakToken, workspaceID){
     const config = {
       method: 'delete',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}/runtime`,
+      url: `${this.baseURL}/api/workspace/${workspaceID}/runtime`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${keycloakToken}`
@@ -155,7 +158,7 @@ class Connector {
   async deleteWorkspace(keycloakToken, workspaceID){
     const config = {
       method: 'delete',
-      url: `https://che-smartclide-che.che.smartclide.eu/api/workspace/${workspaceID}`,
+      url: `${this.baseURL}/api/workspace/${workspaceID}`,
       headers: {
         'Accept': 'application/json',
         'Authorization': `Bearer ${keycloakToken}`
