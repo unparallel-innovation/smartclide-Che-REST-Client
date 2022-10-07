@@ -15,7 +15,7 @@ npm install @unparallel/smartclide-che-rest-client
 ```javascript
 import Connector from '@unparallel/smartclide-che-rest-client';
 
-let connector = new Connector();
+let connector = new Connector(baseURL);
 
 // Create workspace with the given devfile
 connector.createWorkspace(keycloakToken, devfile);
